@@ -1,0 +1,36 @@
+{
+  "name": "kylecodes",
+  "version": "1.0.0",
+  "description": "My personal webpage on the interwebs",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/knguyen1/kylecodes.git"
+  },
+  "keywords": [
+    "developer",
+    "node",
+    "express",
+    "coder",
+    "resume"
+  ],
+  "author": "dbo.kylenguyen@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/knguyen1/kylecodes/issues"
+  },
+  "homepage": "https://github.com/knguyen1/kylecodes#readme",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "angular-ui-router": "^0.3.2",
+    "ejs": "^2.5.5",
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

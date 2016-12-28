@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Test</title>
+</head>
+<body ng-app='app' ng-controller="MainCtrl">
+
+<%- message %>
+<a href="#/about"> /about</a> |
+<a href="#/"> home</a>
+<!-- uncomment if HTML5Mode on -->
+<!-- <a href="/about"> /about</a> | -->
+<!-- <a href="/"> home</a> -->
+<hr />
+<div ng-view>
+</div>
+
+<!-- begin scripts -->
+<script src="/angular/angular.min.js"></script>
+<script src="/js/app.js"></script>
+
+</body>
+</html>
