@@ -1,21 +1,3 @@
-// const express = require('express');
-// const app = express();
-// const path = require('path');
-//
-// //get the public static directory
-// app.use(express.static(path.join(__dirname, '/public')));
-//
-// app.get('/', (req, res) => {
-//   res.sendFile('/index.html');
-// });
-//
-// //get the listening port
-// const port = process.env.PORT || 1337;
-//
-// app.listen(port, () =>{
-//     console.log('listening to port ' + port);
-// });
-
 const express = require('express');
 const app = express();
 const path = require('path');
@@ -36,9 +18,7 @@ app.get('/', (req, res) => {
 
 //route for angular
 app.use('/angular', express.static(__dirname + '/node_modules/angular/'));
-app.use('/angular-ui-router', express.static(__dirname + ''));
-
-//app.use(routes.index); //everything else
+app.use('/angular-ui-router', express.static(__dirname + '/node_modules/angular-ui-router/release/'));
 
 //get the port
 const port = process.env.PORT || 1337;

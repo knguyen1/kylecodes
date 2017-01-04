@@ -2,28 +2,23 @@
  * Created by Khoa on 12/27/2016.
  */
 
-const app = angular.module("app", ['ngRoute']);
+const app = angular.module("app", ['ui.router']);
 
-// app.config(($locationProvider, $routeProvider) => {
-//    $routeProvider
-//        .when('/', { templateUrl: 'partials/index' })
-//        .when('/about', { templateUrl: 'partials/about' })
-//        .otherwise({ redirectTo: '/' });
-// });
-
-app.config(['$routeProvider', ($routeProvider) => {
-    $routeProvider
-        .when('/', {
-            templateUrl: 'partials/index'
+app.config(["$stateProvider", "$urlRouterProvider", function($stateProvider, $urlRouterProvider) {
+    //default route
+    $urlRouterProvider.otherwise("/");
+    
+    //routes
+    $stateProvider.state("main",{
+            url: "/",
+            templateUrl: "partials/index"
         })
-        .when('/about', {
-            templateUrl: 'partials/about'
-        })
-        .otherwise({
-           redirectTo: '/'
+        .state("about", {
+            url: "/about",
+            templateUrl: "partials/about"
         });
 }]);
 
-app.controller('MainCtrl', ($scope) => {
+app.controller('MainCtrl', function($scope) {
    $scope.hello = "asdl;fkj";
 });

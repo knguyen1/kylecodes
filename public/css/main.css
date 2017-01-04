@@ -1,0 +1,82 @@
+/**
+    AUTHOR:         KYLE NGUYEN
+    CREATED DATE:   01/03/2017
+    PURPOSE:
+**/
+
+body {
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    color: #e0e551;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#intro {
+    position: absolute;
+    left: 0;
+    width: 400px;
+    text-align: center;
+    left: 50%;
+    top: 50%;
+    margin: -200px 0 0 -200px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -ms-user-select: none;
+}
+
+#pic {
+    left: 0;
+    top: 0;
+    margin: 0 auto 15px;
+    position: relative;
+}
+
+.photo {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: table;
+    margin: 0 auto;
+}
+
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: block;
+}
+
+h1, h2 {
+    position: relative;
+}
+
+h1 {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+h2 {
+    color: #999;
+    font-weight: normal;
+    font-size: 1em;
+    letter-spacing: 0.12em;
+}
+
+p {
+    line-height: 2em;
+    font-size: 12px;
+    margin: 0;
+    letter-spacing: 2px;
+    color: #999;
+    text-transform: lowercase;
+}
