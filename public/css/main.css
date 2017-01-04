@@ -53,6 +53,24 @@ canvas {
     display: block;
 }
 
+.social-anchor {
+    margin: 30px 0 0 0;
+}
+
+.anchor-item {
+    padding: 0 15px 0 15px;
+    color: #999;
+}
+
+.anchor-item a, .anchor-item a:active, .anchor-item a:visited {
+    color: #999;
+    text-decoration: none;
+}
+
+.anchor-item a:hover {
+    color: #e0e551;
+}
+
 h1, h2 {
     position: relative;
 }

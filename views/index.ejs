@@ -5,23 +5,46 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Kyle Nguyen — jedi/coder/mind-reader</title>
+    <title>Kyle Nguyen — i am the engineer you're looking for</title>
 
     <!--begin styles-->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700' rel='stylesheet' type='text/css'>
     <link href="/css/main.css" rel="stylesheet">
 </head>
 <body ng-app='app' ng-controller="MainCtrl">
 
-<%- message %>
-<a ui-sref="main">Home</a> |
-<a ui-sref="about">About</a>
-<!-- uncomment if HTML5Mode on -->
-<!-- <a href="/about"> /about</a> | -->
-<!-- <a href="/"> home</a> -->
-<hr />
+<!--<%- message %>-->
+<!--<a ui-sref="main">Home</a> |-->
+<!--<a ui-sref="about">About</a>-->
+<!--&lt;!&ndash; uncomment if HTML5Mode on &ndash;&gt;-->
+<!--&lt;!&ndash; <a href="/about"> /about</a> | &ndash;&gt;-->
+<!--&lt;!&ndash; <a href="/"> home</a> &ndash;&gt;-->
+<!--<hr />-->
 
 <canvas id="partycles"></canvas>
+<div id="intro">
+    <div id="pic">
+        <div class="photo">
+            <img src="/img/profile.jpg" class="profile-photo" style="cursor: pointer" />
+        </div>
+    </div>
+    <h1>Kyle Nguyen</h1>
+    <h2>Coder by Day, Yogi By Night</h2>
+    <p>(Jedi Mind Tricks When I Feel Like It)</p>
+    <div class="social-anchor">
+        <span class="anchor-item">
+            <a title="My GitHub" href="https://github.com/knguyen1/" target="_blank">
+                <i class="fa fa-github fa-3x" aria-hidden="true"></i>
+            </a>
+        </span>
+        <span class="anchor-item">
+            <a title="My LinkedIn" href="linkedin.com/in/kylenn" target="_blank">
+                <i class="fa fa-linkedin fa-3x" aria-hidden="true"></i>
+            </a>
+        </span>
+    </div>
+</div>
 
 <main ui-view>
 </main>
