@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6c8e496a-c40e-4afc-a3ef-8297167bb8bf" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/main.css" afterPath="$PROJECT_DIR$/public/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/app.js" afterPath="$PROJECT_DIR$/public/js/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/particles.js" afterPath="$PROJECT_DIR$/public/js/particles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.ejs" afterPath="$PROJECT_DIR$/views/index.ejs" />
     </list>
     <ignored path="kylecodes.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -373,12 +369,12 @@
       <updated>1482857864819</updated>
       <workItem from="1482857865997" duration="13395000" />
       <workItem from="1482983888496" duration="24273000" />
-      <workItem from="1483622786579" duration="509000" />
+      <workItem from="1483622786579" duration="749000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38177000" />
+    <option name="totallyTimeSpent" value="38417000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-512" width="1096" height="1936" extended-state="6" />

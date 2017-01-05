@@ -218,6 +218,7 @@ Particle.prototype = (function(o) {
     document.getElementById('moreDotsClick').addEventListener('click', function(){
         addParticle(10);
     }, false);
+    
     resize(null);
 
     addParticle(PARTICLE_NUM);
