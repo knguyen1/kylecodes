@@ -211,10 +211,13 @@ Particle.prototype = (function(o) {
     }
 
     /** INITIALIZE **/
-    canvas = document.getElementById('partycles');
+    canvas = document.getElementById('particles');
     bufferCanvas = document.createElement('canvas');
 
     window.addEventListener('resize', resize, false);
+    document.getElementById('moreDotsClick').addEventListener('click', function(){
+        addParticle(10);
+    }, false);
     resize(null);
 
     addParticle(PARTICLE_NUM);

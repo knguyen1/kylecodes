@@ -75,7 +75,7 @@ h1, h2 {
     position: relative;
 }
 
-h1 {
+.name {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
     font-size: 2em;
@@ -83,18 +83,24 @@ h1 {
     text-transform: uppercase;
 }
 
-h2 {
+.blurb {
     color: #999;
     font-weight: normal;
     font-size: 1em;
     letter-spacing: 0.12em;
 }
 
-p {
+.blurb2 {
     line-height: 2em;
     font-size: 12px;
     margin: 0;
     letter-spacing: 2px;
     color: #999;
     text-transform: lowercase;
+    text-decoration: none;
+}
+
+.blurb2:hover {
+    color: #e0e551;
+    cursor: pointer;
 }
