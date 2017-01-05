@@ -101,7 +101,7 @@ h1, h2 {
     text-decoration: none;
 }
 
-.blurb2:hover {
+a.blurb2:hover {
     color: #e0e551;
     cursor: pointer;
 }
