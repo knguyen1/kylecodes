@@ -20,10 +20,10 @@ app.controller('MainCtrl', ['$scope','animate',function($scope, animate) {
     //build the dot with starting position x y and vector
     function buildShape() {
         return {
-            x: Math.floor(Math.random() * screenWidth - PARTICLE_RADIUS * 2), //+ 1 + PARTICLE_RADIUS,
-            y: Math.floor(Math.random() * screenHeight - PARTICLE_RADIUS * 2), //+ 1 + PARTICLE_RADIUS,
-            velX: Math.random() * MAX_VELOCITY - MAX_VELOCITY / 2,
-            velY: Math.random() * MAX_VELOCITY - MAX_VELOCITY / 2
+            x: Math.floor(Math.random() * screenWidth - PARTICLE_RADIUS * 2) + 1 + PARTICLE_RADIUS,
+            y: Math.floor(Math.random() * screenHeight - PARTICLE_RADIUS * 2) + 1 + PARTICLE_RADIUS,
+            velX: Math.random() * MAX_VELOCITY - MAX_VELOCITY/2,
+            velY: Math.random() * MAX_VELOCITY - MAX_VELOCITY/2
         };
     }
 
@@ -138,10 +138,10 @@ function animator(shapes, animate) {
             const nextPosY = shape.y + elapsed * shape.velY / 1000;
 
             //bounce off walls
-            if(nextPosX < 3 || nextPosX + 3 > maxX)
+            if(nextPosX < PARTICLE_RADIUS || nextPosX + PARTICLE_RADIUS > maxX)
                 shape.velX *= -1;
 
-            if(nextPosY < 3 || nextPosY + 3 > maxY)
+            if(nextPosY < PARTICLE_RADIUS || nextPosY + PARTICLE_RADIUS > maxY)
                 shape.velY *= -1;
 
             //update position
@@ -150,9 +150,14 @@ function animator(shapes, animate) {
 
             //if the window is resized, bring the balls with you
             if(shape.x > maxX)
-                shape.x = 2 * maxX - shape.x;
+                shape.x = maxX - PARTICLE_RADIUS;
             if(shape.y > maxY)
-                shape.y = 2 * maxY - shape.y;
+                shape.y = maxY - PARTICLE_RADIUS;
+
+            if(shape.x < 0)
+                shape.x = PARTICLE_RADIUS;
+            if(shape.y < PARTICLE_RADIUS)
+                shape.y = PARTICLE_RADIUS;
         }
 
         animate(tick);
