@@ -31,13 +31,13 @@ body {
 }
 
 .dot-blur1 {
-    -ms-filter: blur(5px);
-    filter: blur(5px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
 }
 
 .dot-blur2 {
-    -ms-filter: blur(2px);
-    filter: blur(2px);
+    -ms-filter: blur(1px);
+    filter: blur(1px);
 }
 
 #intro {
@@ -52,6 +52,12 @@ body {
     -moz-user-select: none;
     user-select: none;
     -ms-user-select: none;
+}
+
+.fixed-to-top-10 {
+    position:fixed;
+    top: 0px;
+    width: 400px;
 }
 
 #pic {
@@ -128,4 +134,69 @@ h1, h2 {
 a.blurb2:hover {
     color: #e0e551;
     cursor: pointer;
+}
+
+/**
+    PORTFOLIO
+**/
+
+.grid-block {
+    display: -ms-flexbox;
+    display: flex;
+    height: auto;
+    position: relative;
+    overflow: hidden;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -ms-flex-order: 0;
+    order: 0;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+.grid-content {
+    display: block;
+    padding: 0 0rem;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+}
+
+.grid-content:nth-child(2n) {
+    padding: 0 1em;
+}
+
+.ul-portfolio {
+    list-style: none;
+    position: relative;
+    padding: 0;
+}
+
+@media only screen and (min-width: 668px) {
+    .ul-portfolio li {
+        float: left;
+        width: 20%;
+        margin: 0 2.5% 2.5% 0;
+    }
+
+    .ul-portfolio li:nth-child(2n) {
+        margin-right: 2.5%;
+    }
+
+    .ul-portfolio h3 {
+        text-align: left;
+    }
 }

@@ -11,14 +11,28 @@ app.engine('ejs', engine.renderFile);
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 
-app.get('/partials/:filename', routes.partials);
-app.get('/', (req, res) => {
-   res.render('index', {message: 'hello!!'});
+//app.get('/partials/:filename', routes.partials);
+
+app.get('/', (req, res, next) => {
+   res.render('index');
+});
+
+// /api/get_cities
+//sample call: http://localhost:1337/api/randomair/get_airports
+app.use('/api', routes);
+
+app.get('/:page', (req, res, next) => {
+   res.render(req.params.page);
 });
 
 //route for angular
 app.use('/angular', express.static(__dirname + '/node_modules/angular/'));
 app.use('/angular-ui-router', express.static(__dirname + '/node_modules/angular-ui-router/release/'));
+
+//catch errors, show friendly err page
+app.use((err, req, res, next) => {
+   res.status(err.statusCode).send('Uh oh!');
+});
 
 //get the port
 const port = process.env.PORT || 1337;

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+        Are you doing cool things with the latest tech?
+        Let's work together: dbo.kylenguyen@gmail.com
+    -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Kyle Nguyen — i am the engineer you're looking for — flashcards</title>
+
+    <!--begin styles-->
+    <link href="/css/foundation.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/animate.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:700" rel="stylesheet">
+    <link href="/css/flashcards.css" rel="stylesheet">
+</head>
+<body ng-app='Flashcards' ng-controller="FlashcardsCtrl">
+
+<flashcards-header></flashcards-header>
+<main>
+    <div class="row">
+        <card-container></card-container>
+    </div>
+</main>
+
+<!-- begin scripts -->
+<script src="/js/jquery.min.js"></script>
+<script src="/angular/angular.min.js"></script>
+<script src="/js/angular-sanitize.min.js"></script>
+<script src="/js/flashcards.js"></script>
+
+<!-- angular directives' templates -->
+<script type="text/ng-template" id="flheader.html">
+    <header>
+        <div class="top-bar">
+            <div class="row">
+                <div class="top-bar-left">
+                    <h1 id="logo"><span class="pop">ng-</span>Flashcards</h1>
+                </div>
+                <div class="top-bar-middle">
+
+                </div>
+                <div class="top-bar-right">
+
+                </div>
+            </div>
+        </div>
+    </header>
+</script>
+
+<script type="text/ng-template" id="cardcontainer.html">
+    <div class="content-wrapper">
+        <div class="add-card-wrapper">
+            <div class="add-card-button" ng-click="addCard()">
+                Add card
+            </div>
+        </div>
+    </div>
+    <div class="content-wrapper">
+        <card ng-repeat="card in cards track by card.id" card-data="card" ng-if="getCurrentCard() === card.id">
+
+        </card>
+    </div>
+    <div class="dots-nav-wrapper">
+        <span ng-repeat="card in cards track by card.id" ng-class="getCurrentCard() === card.id ? 'active' : ''" class="dots-nav-dot fa fa-circle" ng-click="setCurrentCard(card.id)"></span>
+    </div>
+
+    <create-card ng-if="showModal" toggle="toggleModal()"></create-card>
+</script>
+
+<script type="text/ng-template" id="card.html">
+    <div ng-class="showAnswer ? 'flashcard back' : 'flashcard'" ng-click="toggleAnswer()">
+        <span class="flashcard-counter">
+            {{card.id + 1}} | {{showAnswer ? 'Answer' : 'Question'}}
+        </span>
+
+        <div class="flashcard-flip-card">
+            <span ng-class="'fa fa-' + (showAnswer ? 'reply' : 'share')"></span>
+        </div>
+
+        <div ng-class="'flashcard-content-' + (showAnswer ? 'back' : 'front')">
+            <!--{{(showAnswer ? card.answer : card.question)}}-->
+            <p ng-bind-html="(showAnswer ? card.answer : card.question) | linky"></p>
+        </div>
+
+        <div ng-if="showAnswer" class="flashcard-actions">
+            <div ng-class="{disabled: card.id === 0}" class="flashcard-prev-button" ng-click="showPreviousCard()">
+                Prev
+            </div>
+            <div ng-class="{disabled: getSize() - 1 === card.id}" class="flashcard-next-button" ng-click="showNextCard()">
+                Next
+            </div>
+        </div>
+    </div>
+</script>
+
+<script type="text/ng-template" id="createcard.html">
+    <div class="create-card">
+        <div class="create-card-shadow" ng-click="d()">
+
+        </div>
+        <div class="create-card-body">
+            <h1>Create New Card</h1>
+            <div class="create-card-input-wrapper">
+                <input id="question" ng-model="cardQuestion" placeholder="Question, i.e. 'What is your quest?'" />
+                <input id="answer" ng-model="cardAnswer" placeholder="Answer, i.e. 'I seek the grail.'" />
+
+                <br />
+                <button ng-class="(cardQuestion.length === 0 || cardAnswer.length === 0) ? 'disabled' : ''" class="create-card-button" ng-click="createCard(cardQuestion, cardAnswer)">Create</button>
+                <div class="create-card-error">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+#logo {
+    font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    background-color: rgba(11, 51, 56, 1);
+    color: #fff;
+}
+
+.pop {
+    color: #e0e551;
+}
+
+.flight-booker-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+    background: url("/img/place_01.jpg") no-repeat center;
+    margin: 0 auto;
+    padding: 2em;
+    height: 20em;
+    width: 100%;
+}
+
+.welcome-blurb {
+    color: #fff;
+    font-family: Roboto;
+}
