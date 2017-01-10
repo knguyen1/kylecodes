@@ -1,3 +1,172 @@
+article, aside, footer, header, hav, section {
+    display: block;
+}
+
+*, :after, :before {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+
+blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
+    margin: 0;
+    padding: 0
+}
+
+@media print, screen and (min-width:40em) {
+    h1 {
+        font-size: 3rem
+    }
+    h2 {
+        font-size: 2.5rem
+    }
+    h3 {
+        font-size: 1.9375rem
+    }
+    h4 {
+        font-size: 1.5625rem
+    }
+    h5 {
+        font-size: 1.25rem
+    }
+    h6 {
+        font-size: 1rem
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    color: inherit;
+    text-rendering: optimizeLegibility
+}
+h1 small, h2 small, h3 small, h4 small, h5 small, h6 small {
+    line-height: 0;
+    color: #cacaca
+}
+h1 {
+    font-size: 1.5rem
+}
+h1, h2 {
+    line-height: 1.4;
+    margin-top: 0;
+    margin-bottom: .5rem
+}
+
+.row {
+    max-width: 75rem;
+    margin-right: auto;
+    margin-left: auto
+}
+.row:after, .row:before {
+    display: table;
+    content: " "
+}
+.row:after {
+    clear: both
+}
+.row.collapse>.column, .row.collapse>.columns {
+    padding-right: 0;
+    padding-left: 0
+}
+.row .row {
+    margin-right: -.625rem;
+    margin-left: -.625rem
+}
+@media print, screen and (min-width:40em) {
+    .row .row {
+        margin-right: -.9375rem;
+        margin-left: -.9375rem
+    }
+}
+@media print, screen and (min-width:64em) {
+    .row .row {
+        margin-right: -.9375rem;
+        margin-left: -.9375rem
+    }
+}
+.row .row.collapse {
+    margin-right: 0;
+    margin-left: 0
+}
+.row.expanded {
+    max-width: none
+}
+.row.expanded .row {
+    margin-right: auto;
+    margin-left: auto
+}
+.row.gutter-small>.column, .row.gutter-small>.columns {
+    padding-right: .625rem;
+    padding-left: .625rem
+}
+.row.gutter-medium>.column, .row.gutter-medium>.columns {
+    padding-right: .9375rem;
+    padding-left: .9375rem
+}
+
+.top-bar {
+    padding: .5rem
+}
+.top-bar:after, .top-bar:before {
+    display: table;
+    content: " "
+}
+.top-bar:after {
+    clear: both
+}
+.top-bar, .top-bar ul {
+    background-color: #e6e6e6
+}
+.top-bar input {
+    max-width: 200px;
+    margin-right: 1rem
+}
+.top-bar .input-group-field {
+    width: 100%;
+    margin-right: 0
+}
+.top-bar input.button {
+    width: auto
+}
+.top-bar .top-bar-left, .top-bar .top-bar-right {
+    width: 100%
+}
+@media print, screen and (min-width:40em) {
+    .top-bar .top-bar-left, .top-bar .top-bar-right {
+        width: auto
+    }
+}
+@media screen and (max-width:63.9375em) {
+    .top-bar.stacked-for-medium .top-bar-left, .top-bar.stacked-for-medium .top-bar-right {
+        width: 100%
+    }
+}
+@media screen and (max-width:74.9375em) {
+    .top-bar.stacked-for-large .top-bar-left, .top-bar.stacked-for-large .top-bar-right {
+        width: 100%
+    }
+}
+.top-bar-title {
+    display: inline-block;
+    float: left;
+    padding: .5rem 1rem .5rem 0
+}
+.top-bar-title .menu-icon {
+    bottom: 2px
+}
+.top-bar-left {
+    float: left
+}
+.top-bar-right {
+    float: right
+}
+
 #logo {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
