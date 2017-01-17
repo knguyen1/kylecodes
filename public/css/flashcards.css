@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+    font-family: Roboto,'Open Sans', 'Helvetica Neue', Arial, sans-serif;
     background-color: #f0f0f0;
 }
 
@@ -248,4 +248,16 @@ body {
 
 .create-card-button:focus {
     outline: none;
+}
+
+.book-flights-here {
+}
+
+.span6 {
+    width: 50%;
+    float: left;
+}
+
+.clearfix {
+    clear: both;
 }

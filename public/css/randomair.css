@@ -1,4 +1,4 @@
-article, aside, footer, header, hav, section {
+article, aside, footer, header, div, section {
     display: block;
 }
 
@@ -10,6 +10,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fff;
+    font-family: 'Roboto', serif;
 }
 
 blockquote, dd, div, dl, dt, form, h1, h2, h3, h4, h5, h6, li, ol, p, pre, td, th, ul {
@@ -167,6 +168,47 @@ h1, h2 {
     float: right
 }
 
+.full-width {
+    max-width: 1400px;
+}
+
+.footer {
+    background-color: #2980b9;
+    padding: 2rem 4rem;
+    text-align: center;
+    color: #fff;
+}
+.footer i {
+    font-size: 100px;
+}
+
+.footer h4 {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-top: 2.5rem;
+    margin-bottom: 10px;
+}
+.footer p, .footer a {
+    font-weight: 300;
+    font-size: .8em;
+    color: #fff;
+}
+
+@media only screen and (min-width: 40.063em) {
+    .footer .columns:nth-child(n+2) {
+        border-left: 1px solid #b3b3b3;
+        min-height: 280px;
+    }
+}
+.footer-links {
+    list-style-type: none;
+}
+.footer-links li {
+    margin-top: .5em;
+}
+
 #logo {
     font-family: 'Montserrat', 'Helvetica Neue', Arial, sans-serif;
     font-weight: 700;
@@ -181,18 +223,150 @@ h1, h2 {
     color: #e0e551;
 }
 
-.flight-booker-wrapper {
+.random-city {
     display: flex;
     justify-content: center;
     background-color: #f0f0f0;
-    background: url("/img/place_01.jpg") no-repeat center;
+    /*background: url("/img/place_01.jpg") no-repeat center;*/
     margin: 0 auto;
-    padding: 2em;
+    padding-top: 2em;
     height: 20em;
     width: 100%;
 }
 
 .welcome-blurb {
     color: #fff;
-    font-family: Roboto;
+    font-family: 'Roboto', serif;
+    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.44);
+}
+
+/**
+    FLIGHT BOOKER!
+**/
+
+div {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font: inherit;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+.flight-booker-wrapper {
+    margin-top: -100px;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    font-family: 'Roboto', serif;
+}
+
+.flight-inputs {
+    margin-bottom: 20px;
+}
+
+.widgets {
+    /*background: #0078d2;*/
+    /**zoom: 1;*/
+    /*filter: progid: DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF0078D2', endColorstr='#FF00467F');*/
+    /*background: -owg-linear-gradient(#0078d2, #00467f);*/
+    /*background: -webkit-linear-gradient(#0078d2, #00467f);*/
+    /*background: -moz-linear-gradient(#0078d2, #00467f);*/
+    /*background: -o-linear-gradient(#0078d2, #00467f);*/
+    /*background: linear-gradient(#0078d2, #00467f);*/
+    color: #fff;
+    font-size: 100%
+}
+
+.widgets-kickout {
+    position: relative;
+}
+
+.widgets-kickout:before {
+    content: " ";
+    display: table;
+}
+
+.widgets-kickout:after {
+    clear: both;
+}
+
+.widgets-kickout:after {
+    content: " ";
+    display: table;
+}
+
+.span4 {
+    width: 30%;
+    float: left;
+    margin: 2.13178%;
+}
+
+.span8 {
+    width: 64%;
+}
+
+.span6 {
+    float: left;
+    width: 50%;
+}
+
+.widgets-holder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28%;
+    height: 100%;
+    font-family: 'Roboto', serif;
+}
+
+.widgets-flight-info-shadow-chop {
+    overflow: hidden;
+    margin-top: 23px;
+}
+
+.widgets-flight-info {
+    width: 69.85%;
+    background-color: #fff;
+    float: right;
+    min-height: 20em;
+    margin: 0 23px 23px 23px;
+    box-shadow: 0px 5px 23px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.flight-blurb {
+    color: #36495a;
+    margin-top: 20px;
+    font-family: inherit;
+}
+
+.why {
+    color: rgba(11, 51, 56, 1);
+    margin-bottom: 11px;
+}
+
+.flight-info-container {
+    display: flex;
+}
+
+.flight-info-card {
+    width: 20%;
+    text-align: center;
+}
+
+.city {
+    font-size: 12px;
+    color: #9a9a9a;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+.time {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.price {
+    color: #576b81;
 }

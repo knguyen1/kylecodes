@@ -1,1 +1,21 @@
 //2546a200-9796-45e2-a80a-eeb141141505
+
+/**
+ * GOOGLE FLIGHTS API: https://developers.google.com/qpx-express/v1/trips/search
+**/
+
+//THIS IS YOUR API KEY
+//AIzaSyDOifOrADrJ_AjlvZtRuyjdZMGhow584Os
+
+//api end point information
+//https://developers.google.com/qpx-express/v1/
+
+//api endpoint
+//POST https://www.googleapis.com/qpxExpress/v1/trips/search
+//information https://developers.google.com/qpx-express/v1/trips/search
+
+//google maps api key
+//AIzaSyDOi1eSXT5Ostkb-q5rCrzgcLubGJzSIBs
+
+//google places api key
+// AIzaSyByrVuOoLHG-ZvTH2hm82-mrP79u4r9Ygo

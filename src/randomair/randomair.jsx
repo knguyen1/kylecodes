@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import Header from './components/Header.jsx';
+import Footer from './components/Footer.jsx';
 import FlightBooking from './components/FlightBooking.jsx';
 
 //listen for touch/tap.clickevents, necessary until official react version is released
@@ -20,6 +21,7 @@ class RandmAir extends React.Component {
             <div>
                 <Header />
                 <FlightBooking />
+                <Footer />
             </div>
         )
     }
